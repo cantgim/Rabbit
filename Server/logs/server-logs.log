@@ -1,0 +1,77 @@
+[DEBUG] 2022-10-31 17:18:16.256 [vn.vnpay.server.App.main()] ConsumerWorkService - Creating executor service with 16 thread(s) for consumer work service
+[INFO ] 2022-10-31 17:18:16.324 [vn.vnpay.server.App.main()] Worker - Connection created.
+[INFO ] 2022-10-31 17:18:16.354 [vn.vnpay.server.App.main()] Worker - Channel created.
+[INFO ] 2022-10-31 17:18:16.360 [vn.vnpay.server.App.main()] Worker - Worker listening...
+[INFO ] 2022-10-31 17:18:53.833 [pool-2-thread-4] Worker - New transaction received.
+[INFO ] 2022-10-31 17:18:53.855 [pool-2-thread-4] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 15:19:49 ICT 2022)
+[INFO ] 2022-10-31 17:18:53.896 [pool-2-thread-4] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 17:18:53.897 [pool-2-thread-4] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 17:18:54.017 [pool-2-thread-4] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 17:18:54.056 [pool-2-thread-4] Worker - Verifying payDate...
+[INFO ] 2022-10-31 17:18:54.057 [pool-2-thread-4] Worker - Request payment timeout
+[INFO ] 2022-10-31 17:20:28.769 [pool-2-thread-5] Worker - New transaction received.
+[INFO ] 2022-10-31 17:20:28.771 [pool-2-thread-5] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 17:20:28.772 [pool-2-thread-5] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 17:20:28.773 [pool-2-thread-5] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 17:20:28.775 [pool-2-thread-5] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 17:20:28.780 [pool-2-thread-5] Worker - Verifying payDate...
+[INFO ] 2022-10-31 17:20:28.780 [pool-2-thread-5] Worker - Verifying amount...
+[INFO ] 2022-10-31 17:20:28.782 [pool-2-thread-5] JedisUtils - Begin init.
+[INFO ] 2022-10-31 17:20:28.783 [pool-2-thread-5] JedisUtils - Get pool success. Saving to hashes...
+[INFO ] 2022-10-31 17:20:28.789 [pool-2-thread-5] JedisUtils - Set redis expire time.
+[INFO ] 2022-10-31 17:20:28.791 [pool-2-thread-5] JedisUtils - Transaction saved.
+[INFO ] 2022-10-31 17:20:34.711 [pool-2-thread-6] Worker - New transaction received.
+[INFO ] 2022-10-31 17:20:34.713 [pool-2-thread-6] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 17:20:34.714 [pool-2-thread-6] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 17:20:34.714 [pool-2-thread-6] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 17:20:34.716 [pool-2-thread-6] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 17:20:34.717 [pool-2-thread-6] Worker - Invalid transactionId/trace
+[DEBUG] 2022-10-31 17:46:35.201 [vn.vnpay.server.App.main()] ConsumerWorkService - Creating executor service with 16 thread(s) for consumer work service
+[INFO ] 2022-10-31 17:46:35.247 [vn.vnpay.server.App.main()] Worker - Connection created.
+[INFO ] 2022-10-31 17:46:35.262 [vn.vnpay.server.App.main()] Worker - Channel created.
+[INFO ] 2022-10-31 17:46:35.266 [vn.vnpay.server.App.main()] Worker - Worker listening...
+[INFO ] 2022-10-31 17:48:32.015 [pool-2-thread-4] Worker - New transaction received.
+[INFO ] 2022-10-31 17:48:32.038 [pool-2-thread-4] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 17:48:32.039 [pool-2-thread-4] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 17:48:32.040 [pool-2-thread-4] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 17:48:32.136 [pool-2-thread-4] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 17:48:32.162 [pool-2-thread-4] Worker - Invalid transactionId/trace
+[DEBUG] 2022-10-31 17:49:16.399 [vn.vnpay.server.App.main()] ConsumerWorkService - Creating executor service with 16 thread(s) for consumer work service
+[INFO ] 2022-10-31 17:49:16.451 [vn.vnpay.server.App.main()] Worker - Connection created.
+[INFO ] 2022-10-31 17:49:16.463 [vn.vnpay.server.App.main()] Worker - Channel created.
+[INFO ] 2022-10-31 17:49:16.467 [vn.vnpay.server.App.main()] Worker - Worker listening...
+[INFO ] 2022-10-31 17:49:20.705 [pool-2-thread-5] Worker - New transaction received.
+[INFO ] 2022-10-31 17:49:20.706 [pool-2-thread-5] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 17:49:20.707 [pool-2-thread-5] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 17:49:20.707 [pool-2-thread-5] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 17:49:20.708 [pool-2-thread-5] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 17:49:20.710 [pool-2-thread-5] Worker - Invalid transactionId/trace
+[INFO ] 2022-10-31 17:49:28.174 [pool-2-thread-4] Worker - New transaction received.
+[INFO ] 2022-10-31 17:49:28.197 [pool-2-thread-4] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 17:49:28.200 [pool-2-thread-4] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 17:49:28.200 [pool-2-thread-4] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 17:49:28.318 [pool-2-thread-4] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 17:49:28.361 [pool-2-thread-4] Worker - Invalid transactionId/trace
+[DEBUG] 2022-10-31 18:23:12.922 [vn.vnpay.server.App.main()] ConsumerWorkService - Creating executor service with 16 thread(s) for consumer work service
+[INFO ] 2022-10-31 18:23:12.972 [vn.vnpay.server.App.main()] Worker - Connection created.
+[INFO ] 2022-10-31 18:23:12.985 [vn.vnpay.server.App.main()] Worker - Channel created.
+[INFO ] 2022-10-31 18:23:12.992 [vn.vnpay.server.App.main()] Worker - Worker listening...
+[DEBUG] 2022-10-31 18:25:07.668 [vn.vnpay.server.App.main()] ConsumerWorkService - Creating executor service with 16 thread(s) for consumer work service
+[INFO ] 2022-10-31 18:25:07.711 [vn.vnpay.server.App.main()] Worker - Connection created.
+[ERROR] 2022-10-31 18:25:07.725 [vn.vnpay.server.App.main()] App - null
+[INFO ] 2022-10-31 18:25:50.682 [pool-2-thread-5] Worker - New transaction received.
+[INFO ] 2022-10-31 18:25:50.684 [pool-2-thread-5] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 18:25:50.685 [pool-2-thread-5] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 18:25:50.685 [pool-2-thread-5] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 18:25:50.686 [pool-2-thread-5] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 18:25:50.688 [pool-2-thread-5] Worker - Invalid transactionId/trace
+[DEBUG] 2022-10-31 18:26:19.499 [vn.vnpay.server.App.main()] ConsumerWorkService - Creating executor service with 16 thread(s) for consumer work service
+[INFO ] 2022-10-31 18:26:19.559 [vn.vnpay.server.App.main()] Worker - Connection created.
+[INFO ] 2022-10-31 18:26:19.584 [vn.vnpay.server.App.main()] Worker - Channel created.
+[INFO ] 2022-10-31 18:26:19.591 [vn.vnpay.server.App.main()] Worker - Worker listening...
+[INFO ] 2022-10-31 18:26:27.272 [pool-2-thread-4] Worker - New transaction received.
+[INFO ] 2022-10-31 18:26:27.299 [pool-2-thread-4] Worker - Transaction verifying Transaction(transactionId=2, trace=1, name=1, amount=10000.0, payDate=Mon Oct 31 17:19:49 ICT 2022)
+[INFO ] 2022-10-31 18:26:27.301 [pool-2-thread-4] Worker - Verifying transactionId and trace...
+[INFO ] 2022-10-31 18:26:27.301 [pool-2-thread-4] JedisUtils - Check transaction exist.
+[INFO ] 2022-10-31 18:26:27.410 [pool-2-thread-4] JedisUtils - Redis get pool success.
+[INFO ] 2022-10-31 18:26:27.439 [pool-2-thread-4] Worker - Invalid transactionId/trace

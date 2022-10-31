@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Transaction implements Serializable {
     private long transactionId;
-    private long traceId;
+    private long trace;
     private String name;
     private double amount;
     private Date payDate;

@@ -1,4 +1,4 @@
-vn/vnpay/client/Client.class
-vn/vnpay/client/App.class
-vn/vnpay/client/constant/Constant.class
-vn/vnpay/client/constant/Constant$RabbitMQ.class
+vn\vnpay\client\mq\RabbitMQConfiguration.class
+vn\vnpay\client\service\TransactionService.class
+vn\vnpay\client\rest\TransactionController.class
+vn\vnpay\client\service\impl\TransactionServiceImpl.class

@@ -1,0 +1,23 @@
+ứng dụng 1: đẩy tin vào queue: transactionId, trace, name, amount, payDate
+Ứng dụng 2: nhận thông tin từ queue, kiểm tra transactionId, số trace có trùng trong 1 ngày? 
+ kiểm tra payDate có lớn hơn 5p so với thời gian hiện tại, kt amount lớn hơn 0
+trả về kq cho ứng dụng 1 qua queue. lưu data vào redis
+Ud 1: Rest
+Ud 2: CLI
+
+
+Xem lai expire, tai sao ttl -2 k phai -1
+Tách mã lỗi
+Chuyển config properties sang file
+Đặt lại tên module
+Log đi kèm thông tin đầu vào
+Multithreading worker
+Ghi log token của từng thread
+Chuyển gson builder thành static
+Implements channel object pool
+Chuyển file log -> rolling file
+Xem logback
+log exception kèm trace
+Close RabbitMq connection
+Bỏ try/catch ở controller, xử lý lỗi tại service
+Xử lý khi 1 queues chết

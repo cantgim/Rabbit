@@ -19,7 +19,8 @@ public class JedisConfiguration {
             poolConfig.setTimeBetweenEvictionRuns(Duration.ofSeconds(Constant.Redis.TIME_BETWEEN_EVICTION_RUNS_SEC));
             poolConfig.setBlockWhenExhausted(Constant.Redis.BLOCK_WHEN_EXHAUSTED);
 
-            JedisConfiguration.jedisPool = new JedisPool(poolConfig, Constant.Redis.HOST_NAME);
+            JedisConfiguration.jedisPool = new JedisPool(poolConfig, Constant.Redis.HOST_NAME,
+                    Constant.Redis.PORT);
         }
         return jedisPool;
     }
