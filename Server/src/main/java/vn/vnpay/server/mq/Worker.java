@@ -1,10 +1,12 @@
-package vn.vnpay.server;
+package vn.vnpay.server.mq;
 
 import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.SerializationUtils;
+import vn.vnpay.server.domain.Transaction;
+import vn.vnpay.server.redis.JedisUtils;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -47,12 +49,8 @@ public class Worker {
 
     private boolean validateTransaction(Transaction transaction) throws IOException {
         log.info("[x] Transaction verifying :: {}", transaction);
-        Reader in = new FileReader("transaction.csv");
-        Iterable<CSVRecord> records =
-                CSVFormat.DEFAULT.builder().setHeader().setSkipHeaderRecord(true).build().parse(in);
-        for (CSVRecord record : records) {
-            
-        }
+        JedisUtils jedisUtils = new JedisUtils();
+        jedisUtils.exist()
         return false;
     }
 }

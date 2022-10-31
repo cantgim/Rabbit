@@ -1,4 +1,4 @@
-package vn.vnpay.server;
+package vn.vnpay.server.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

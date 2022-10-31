@@ -1,2 +1,4 @@
-vn\vnpay\client\App.class
-vn\vnpay\client\Client.class
+vn/vnpay/client/Client.class
+vn/vnpay/client/App.class
+vn/vnpay/client/constant/Constant.class
+vn/vnpay/client/constant/Constant$RabbitMQ.class

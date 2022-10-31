@@ -1,14 +1,14 @@
 package vn.vnpay.server;
 
 import lombok.extern.slf4j.Slf4j;
+import vn.vnpay.server.constant.Constant;
+import vn.vnpay.server.mq.Worker;
 
 @Slf4j
 public class App {
-    public static final String HOST_NAME = "localhost";
-    public static final String QUEUE_NAME = "transaction_queue";
     public static void main(String[] args) {
         try {
-            new Worker(HOST_NAME, QUEUE_NAME);
+            new Worker(Constant.RabbitMQ.HOST_NAME, Constant.RabbitMQ.REQUEST_QUEUE_NAME);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
