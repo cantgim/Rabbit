@@ -16,8 +16,5 @@
         <module name="RestAPI" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="RestAPI" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
