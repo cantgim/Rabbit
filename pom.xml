@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>Server</module>
-        <module>Client</module>
+        <module>RestAPI</module>
     </modules>
     <name>Archetype - RPC</name>
     <dependencyManagement>

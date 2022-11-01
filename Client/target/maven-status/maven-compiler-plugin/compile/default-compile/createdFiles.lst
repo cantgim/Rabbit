@@ -1,4 +1,0 @@
-vn\vnpay\client\mq\RabbitMQConfiguration.class
-vn\vnpay\client\service\TransactionService.class
-vn\vnpay\client\rest\TransactionController.class
-vn\vnpay\client\service\impl\TransactionServiceImpl.class
