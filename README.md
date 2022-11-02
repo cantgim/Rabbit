@@ -1,7 +1,7 @@
 # TODO
 
 - [x] Sử dụng logback.
-- [ ] Log file dạng Rolling File.
+- [x] Log file dạng Rolling File.
 - [ ] Log exception kèm trace
 - [ ] Lưu thuộc tính config vào file riêng.
 - [ ] Tách riêng mã lỗi.
