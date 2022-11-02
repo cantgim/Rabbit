@@ -1,4 +1,4 @@
-package vn.vnpay.client.mq;
+package vn.vnpay.api.mq;
 
 import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;

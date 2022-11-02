@@ -1,0 +1,31 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %-7(%replace([%-5level]){'\s', ''}) %d{'HH:mm:ss,SSS'} %X{token} %-35c{5} - %message%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>server-logs.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/logs/%d{yyyy/MM, aux}/rest-logs-%d{dd-MM-yyyy, UTC}.gz</fileNamePattern>
+            <maxHistory>60</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %-7(%replace([%-5level]){'\s', ''}) %d{'HH:mm:ss,SSS'} %X{token} %-35c{5} - %message%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="vn.vnpay.server">
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

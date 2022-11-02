@@ -1,10 +1,10 @@
-package vn.vnpay.client.rest;
+package vn.vnpay.api.rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import lombok.extern.slf4j.Slf4j;
-import vn.vnpay.client.service.TransactionService;
-import vn.vnpay.client.service.impl.TransactionServiceImpl;
+import vn.vnpay.api.service.TransactionService;
+import vn.vnpay.api.service.impl.TransactionServiceImpl;
 import vn.vnpay.server.constant.Constant;
 import vn.vnpay.server.domain.Response;
 import vn.vnpay.server.domain.Transaction;

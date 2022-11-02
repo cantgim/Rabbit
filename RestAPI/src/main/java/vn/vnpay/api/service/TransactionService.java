@@ -1,4 +1,4 @@
-package vn.vnpay.client.service;
+package vn.vnpay.api.service;
 
 import vn.vnpay.server.domain.Response;
 import vn.vnpay.server.domain.Transaction;

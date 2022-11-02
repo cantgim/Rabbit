@@ -1,8 +1,8 @@
-package vn.vnpay.client.service.impl;
+package vn.vnpay.api.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import vn.vnpay.client.mq.RabbitMQConfiguration;
-import vn.vnpay.client.service.TransactionService;
+import vn.vnpay.api.mq.RabbitMQConfiguration;
+import vn.vnpay.api.service.TransactionService;
 import vn.vnpay.server.constant.Constant;
 import vn.vnpay.server.domain.Response;
 import vn.vnpay.server.domain.Transaction;
