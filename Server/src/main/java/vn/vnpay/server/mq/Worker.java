@@ -53,7 +53,7 @@ public class Worker {
      */
     private Response createTransaction(Transaction transaction) {
         if (transaction == null) {
-            return new Response(Constant.Response.FAILURE_CODE, Constant.Response.FAILURE_MESSAGE);
+            return Response.INVALID_TRANSACTION;
         }
         log.info("Transaction verifying {}", transaction);
 
@@ -62,23 +62,23 @@ public class Worker {
         if (jedisUtils.exist(String.valueOf(transaction.getTransactionId()),
                 Constant.TransactionKey.trace).isPresent()) {
             log.info("Invalid transactionId/trace");
-            return new Response(Constant.Response.FAILURE_CODE, Constant.Response.FAILURE_MESSAGE);
+            return Response.IDENTITY_FAILURE;
         }
 
         log.info("Verifying payDate...");
         long timeMillis = System.currentTimeMillis() - transaction.getPayDate().getTime();
         if (timeMillis <= 0 || (timeMillis / 60000 > Constant.Transaction.TIMEOUT_MIN)) {
             log.info("Request payment timeout");
-            return new Response(Constant.Response.FAILURE_CODE, Constant.Response.FAILURE_MESSAGE);
+            return Response.TIMEOUT_FAILURE;
         }
 
         log.info("Verifying amount...");
         if (transaction.getAmount() <= 0) {
             log.info("Transaction amount invalid");
-            return new Response(Constant.Response.FAILURE_CODE, Constant.Response.FAILURE_MESSAGE);
+            return Response.AMOUNT_FAILURE;
         }
         jedisUtils.save(String.valueOf(transaction.getTransactionId()), transaction);
 
-        return new Response(Constant.Response.SUCCESS_CODE, Constant.Response.SUCCESS_MESSAGE);
+        return Response.SUCCESS;
     }
 }

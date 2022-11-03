@@ -6,7 +6,7 @@ Ud 1: Rest
 Ud 2: CLI
 
 
-Xem lai expire, tai sao ttl -2 k phai -1
+Xem lai expire, tai sao ttl -2 k phai -1, fix expire redis
 Tách mã lỗi
 Chuyển config properties sang file
 Đặt lại tên module

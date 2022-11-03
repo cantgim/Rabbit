@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import lombok.extern.slf4j.Slf4j;
 import vn.vnpay.api.service.TransactionService;
 import vn.vnpay.api.service.impl.TransactionServiceImpl;
-import vn.vnpay.server.constant.Constant;
 import vn.vnpay.server.domain.Response;
 import vn.vnpay.server.domain.Transaction;
 
@@ -46,7 +45,7 @@ public class TransactionController extends HttpServlet {
                     transactionService.createTransaction(gson.fromJson(requestBody,
                             Transaction.class));
             resp.setStatus(HttpServletResponse.SC_OK);
-            resp.setContentType(Constant.Response.APPLICATION_JSON);
+            resp.setContentType("application/json");
             OutputStream os = resp.getOutputStream();
             os.write(gson.toJson(response).getBytes());
             os.flush();

@@ -36,7 +36,7 @@ public class RabbitMQConfiguration implements AutoCloseable {
         log.info("Begin call.");
         if (transaction == null) {
             log.info("Transaction must not be null.");
-            return new Response(Constant.Response.FAILURE_CODE, Constant.Response.FAILURE_MESSAGE);
+            return Response.INVALID_TRANSACTION;
         }
         final String corId = UUID.randomUUID().toString();
         final boolean autoAck = true;

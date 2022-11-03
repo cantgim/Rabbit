@@ -28,14 +28,6 @@ public class Constant {
         String trace = "trace";
     }
 
-    public interface Response {
-        String SUCCESS_CODE = "00";
-        String SUCCESS_MESSAGE = "Success";
-        String FAILURE_CODE = "01";
-        String FAILURE_MESSAGE = "Failure";
-        String APPLICATION_JSON = "application/json";
-    }
-
     public interface Transaction {
         int TIMEOUT_MIN = 5;
     }
