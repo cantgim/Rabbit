@@ -7,10 +7,15 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>Server</module>
-        <module>RestAPI</module>
+        <module>validate-server</module>
+        <module>rest-api</module>
+        <module>common</module>
     </modules>
-    <name>Archetype - RPC</name>
+    <name>RPC</name>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -61,9 +66,9 @@
                 <version>0.8.8</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>2.11.1</version>
+                <groupId>com.github.chrisvest</groupId>
+                <artifactId>stormpot</artifactId>
+                <version>3.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

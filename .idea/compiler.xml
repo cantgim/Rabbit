@@ -3,8 +3,9 @@
   <component name="CompilerConfiguration">
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
-      <directory url="file://$PROJECT_DIR$/Server/src/main/resources/archetype-resources" includeSubdirectories="true" />
-      <directory url="file://$PROJECT_DIR$/RestAPI/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/validate-server/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/rest-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/common/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -12,8 +13,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Server" />
-        <module name="RestAPI" />
+        <module name="common" />
+        <module name="rest-api" />
+        <module name="validate-server" />
       </profile>
     </annotationProcessing>
   </component>
