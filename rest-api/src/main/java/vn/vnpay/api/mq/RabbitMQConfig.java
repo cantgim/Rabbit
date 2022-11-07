@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
-/**
- * TODO(cantgim): implements channel object pool
- */
 @Slf4j
 public class RabbitMQConfiguration implements AutoCloseable {
     private final Connection connection;

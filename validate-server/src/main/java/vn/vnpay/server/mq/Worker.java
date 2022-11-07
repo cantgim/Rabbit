@@ -1,6 +1,5 @@
-package vn.vnpay.server.mq;
+package vn.vnpay.common.mq;
 
-import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.SerializationUtils;
 import vn.vnpay.common.constant.Constant;

@@ -1,6 +1,5 @@
-package vn.vnpay.server.mq;
+package vn.vnpay.common.mq;
 
-import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
 import vn.vnpay.common.domain.Response;
 
@@ -13,11 +12,10 @@ import java.util.concurrent.Callable;
 public class WorkerCallable implements Callable<Response> {
     @Override
     public Response call() throws Exception {
-        // get channel pool
         ChannelPoolable channel = ChannelPool.getInstance();
-        // execute task
+        channel.queueSetup();
+        channel.queueConsume();
 
-        // return callable
         return Response.SUCCESS;
     }
 }
