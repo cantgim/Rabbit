@@ -10,5 +10,4 @@
 - [x] Chuyển Gson thành biến static
 - [ ] Implement channel object pool cho MQ
 - [ ] Xử lý DLX
-
-![](../../Downloads/diagram.png)
+![diagram](https://user-images.githubusercontent.com/45166076/200287996-d8176e9c-3fa0-4415-bed9-82ea9cd20c1b.png)
