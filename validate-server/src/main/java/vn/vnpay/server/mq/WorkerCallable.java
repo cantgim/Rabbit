@@ -14,8 +14,7 @@ public class WorkerCallable implements Callable<Response> {
     @Override
     public Response call() throws Exception {
         // get channel pool
-        ChannelPoolable channelPoolable = ChannelPool.borrowObject();
-        Channel channel = channelPoolable.getChannel();
+        ChannelPoolable channel = ChannelPool.getInstance();
         // execute task
 
         // return callable

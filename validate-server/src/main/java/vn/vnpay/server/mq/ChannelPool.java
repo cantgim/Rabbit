@@ -13,7 +13,7 @@ public class ChannelPool {
         pool = Pool.from(new ChannelAllocator(connection)).build();
     }
 
-    public static ChannelPoolable borrowObject() throws InterruptedException {
+    public static ChannelPoolable getInstance() throws InterruptedException {
         return pool.claim(new Timeout(1, TimeUnit.SECONDS));
     }
 
