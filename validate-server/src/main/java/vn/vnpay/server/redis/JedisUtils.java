@@ -13,7 +13,7 @@ public class JedisUtils {
         Jedis jedis = null;
         try {
             log.info("Begin init.");
-            jedis = JedisConfiguration.getPool().getResource();
+            jedis = JedisConfig.getPool().getResource();
             log.info("Get pool success. Saving to hashes...");
             jedis.hset(key, "trace", String.valueOf(transaction.getTrace()));
             jedis.hset(key, "name", String.valueOf(transaction.getName()));
@@ -39,7 +39,7 @@ public class JedisUtils {
         log.info("Check transaction exist.");
         Jedis jedis = null;
         try {
-            jedis = JedisConfiguration.getPool().getResource();
+            jedis = JedisConfig.getPool().getResource();
             log.info("Redis get pool success.");
             return Optional.ofNullable(jedis.hget(key, field));
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class JedisUtils {
     public String get(String key, String field) {
         Jedis jedis = null;
         try {
-            jedis = JedisConfiguration.getPool().getResource();
+            jedis = JedisConfig.getPool().getResource();
             return jedis.hget(key, field);
         } catch (Exception e) {
             log.error(e.getMessage());

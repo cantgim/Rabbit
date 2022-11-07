@@ -1,4 +1,4 @@
-package vn.vnpay.server.mq;
+package vn.vnpay.common.mq;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;

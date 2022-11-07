@@ -1,5 +1,6 @@
-package vn.vnpay.common.mq;
+package vn.vnpay.server.mq;
 
+import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.SerializationUtils;
 import vn.vnpay.common.constant.Constant;
@@ -43,13 +44,7 @@ public class Worker {
         });
         log.info("Worker listening...");
     }
-
-    /**
-     * TODO(cantgim): Refactor to common function
-     *
-     * @param transaction
-     * @return
-     */
+    
     private Response createTransaction(Transaction transaction) {
         if (transaction == null) {
             return Response.INVALID_TRANSACTION;

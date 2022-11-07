@@ -14,11 +14,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 @Slf4j
-public class RabbitMQConfiguration implements AutoCloseable {
+public class RabbitMQConfig implements AutoCloseable {
     private final Connection connection;
     private final Channel channel;
 
-    public RabbitMQConfiguration(String hostName) throws IOException, TimeoutException {
+    public RabbitMQConfig(String hostName) throws IOException, TimeoutException {
         log.info("Connection creating...");
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(hostName);
@@ -42,7 +42,8 @@ public class RabbitMQConfiguration implements AutoCloseable {
         AMQP.BasicProperties props =
                 new AMQP.BasicProperties().builder().correlationId(corId).replyTo(replyQueueName).build();
 
-        channel.basicPublish("", Constant.RabbitMQ.REQUEST_QUEUE_NAME, props, SerializationUtils.serialize(transaction));
+        channel.basicPublish("", Constant.RabbitMQ.REQUEST_QUEUE_NAME, props,
+                SerializationUtils.serialize(transaction));
         log.info("Transaction sending...");
 
         final CompletableFuture<Response> completer = new CompletableFuture<>();

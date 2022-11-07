@@ -49,6 +49,10 @@
             <artifactId>javax.servlet-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.littlenb</groupId>
+            <artifactId>snowflake</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

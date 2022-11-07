@@ -44,6 +44,10 @@
             <artifactId>stormpot</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.littlenb</groupId>
+            <artifactId>snowflake</artifactId>
+        </dependency>
+        <dependency>
             <groupId>vn.vnpay</groupId>
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>

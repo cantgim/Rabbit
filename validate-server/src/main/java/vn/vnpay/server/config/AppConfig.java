@@ -9,13 +9,13 @@ import java.util.Properties;
 
 @Slf4j
 public class AppConfig {
-    public String loadProperties(String[] properties) {
+    public Properties loadProperties(String fileName) {
         Properties prop = new Properties();
-        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("application.yml")) {
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(fileName)) {
             prop.load(inputStream);
         } catch (IOException e) {
             log.error(Arrays.toString(e.getStackTrace()));
         }
-        return "";
+        return prop;
     }
 }

@@ -13,5 +13,17 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.chrisvest</groupId>
+            <artifactId>stormpot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.littlenb</groupId>
+            <artifactId>snowflake</artifactId>
+        </dependency>
     </dependencies>
 </project>
