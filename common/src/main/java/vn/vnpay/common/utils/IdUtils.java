@@ -10,7 +10,7 @@ public class IdUtils {
     private static final int WORKER_BITS = 12;
     private static final int SEQUENCE_BITS = 10;
     private static final long EPOCH_TIMESTAMP = 1415333514000L;
-    private IdGenerator idGenerator;
+    private final IdGenerator idGenerator;
 
     private IdUtils() {
         ElasticIdGeneratorFactory factory = new ElasticIdGeneratorFactory();

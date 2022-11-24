@@ -61,11 +61,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.8</version>
-            </dependency>
-            <dependency>
                 <groupId>com.github.chrisvest</groupId>
                 <artifactId>stormpot</artifactId>
                 <version>3.1</version>
@@ -75,7 +70,17 @@
                 <artifactId>snowflake</artifactId>
                 <version>1.0.3</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>1.33</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.9.1</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

@@ -2,18 +2,40 @@ package vn.vnpay.server.redis;
 
 import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
+import vn.vnpay.common.constant.Constant;
 import vn.vnpay.common.domain.Transaction;
 
+import java.time.Duration;
 import java.util.Calendar;
 import java.util.Optional;
 
 @Slf4j
 public class JedisUtils {
+    private static JedisPool jedisPool;
+
+    public static JedisPool getPool() {
+        if (jedisPool == null) {
+            JedisPoolConfig poolConfig = new JedisPoolConfig();
+            poolConfig.setMaxTotal(JedisConfig.maxTotal);
+            poolConfig.setMaxIdle(JedisConfig.maxIdle);
+            poolConfig.setMinIdle(JedisConfig.minIdle);
+            poolConfig.setMinEvictableIdleTime(Duration.ofSeconds(JedisConfig.minEvictableIdleSec));
+            poolConfig.setTimeBetweenEvictionRuns(
+                    Duration.ofSeconds(JedisConfig.timeBetweenEvictionRunsSec));
+            poolConfig.setBlockWhenExhausted(JedisConfig.blockWhenExhausted);
+
+            jedisPool = new JedisPool(poolConfig, Constant.Redis.HOST_NAME, Constant.Redis.PORT);
+        }
+        return jedisPool;
+    }
+
     public void save(String key, Transaction transaction) {
         Jedis jedis = null;
         try {
             log.info("Begin init.");
-            jedis = JedisConfig.getPool().getResource();
+            jedis = jedisPool.getResource();
             log.info("Get pool success. Saving to hashes...");
             jedis.hset(key, "trace", String.valueOf(transaction.getTrace()));
             jedis.hset(key, "name", String.valueOf(transaction.getName()));
@@ -39,7 +61,7 @@ public class JedisUtils {
         log.info("Check transaction exist.");
         Jedis jedis = null;
         try {
-            jedis = JedisConfig.getPool().getResource();
+            jedis = jedisPool.getResource();
             log.info("Redis get pool success.");
             return Optional.ofNullable(jedis.hget(key, field));
         } catch (Exception e) {
@@ -55,7 +77,7 @@ public class JedisUtils {
     public String get(String key, String field) {
         Jedis jedis = null;
         try {
-            jedis = JedisConfig.getPool().getResource();
+            jedis = jedisPool.getResource();
             return jedis.hget(key, field);
         } catch (Exception e) {
             log.error(e.getMessage());

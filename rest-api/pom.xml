@@ -53,6 +53,10 @@
             <groupId>com.littlenb</groupId>
             <artifactId>snowflake</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

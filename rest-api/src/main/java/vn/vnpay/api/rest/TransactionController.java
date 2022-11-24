@@ -30,7 +30,8 @@ public class TransactionController extends HttpServlet {
 
     private TransactionService transactionService;
 
-    private static final Gson GSON = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+    private static final Gson GSON =
+            new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     @Override
     public void init() {
@@ -41,12 +42,13 @@ public class TransactionController extends HttpServlet {
         try (Connection connection = factory.newConnection()) {
             new ChannelPool(connection);
         } catch (Exception e) {
-            log.error(Arrays.toString(e.getStackTrace()));
+            log.error("Stack trace", e);
         }
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         super.doGet(req, resp);
     }
 
@@ -55,9 +57,10 @@ public class TransactionController extends HttpServlet {
         try {
             IdUtils idUtils = IdUtils.getInstance();
             MDC.put("token", String.valueOf(idUtils.next()));
-            
+
             log.info("Begin transaction post request.");
-            String requestBody = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+            String requestBody =
+                    req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
             if (requestBody.isEmpty()) {
                 log.info("Invalid request.");
                 resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
@@ -65,9 +68,8 @@ public class TransactionController extends HttpServlet {
             }
             log.info("Raw request data {}", requestBody);
             transactionService = new TransactionServiceImpl();
-            Response response =
-                    transactionService.createTransaction(GSON.fromJson(requestBody,
-                            Transaction.class));
+            Response response = transactionService.createTransaction(
+                    GSON.fromJson(requestBody, Transaction.class));
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.setContentType("application/json");
             OutputStream os = resp.getOutputStream();

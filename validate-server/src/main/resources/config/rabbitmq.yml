@@ -1,0 +1,6 @@
+queue:
+  name: "transaction_queue"
+  durable: false
+  exclusive: false
+  auto_delete: false
+prefetch_count: 1

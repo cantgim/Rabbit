@@ -5,7 +5,7 @@ import stormpot.Allocator;
 import stormpot.Slot;
 
 public class ChannelAllocator implements Allocator<ChannelPoolable> {
-    private Connection connection;
+    private final Connection connection;
 
     public ChannelAllocator(Connection connection) {
         this.connection = connection;
